@@ -9,22 +9,6 @@ import (
 	"strings"
 )
 
-type Move int
-type Outcome int
-
-// Enum representation in go
-const (
-	ROCK    Move = 1
-	PAPER   Move = 2
-	SCISSOR Move = 3
-)
-
-const (
-	LOSE Outcome = 0
-	DRAW Outcome = 3
-	WIN  Outcome = 6
-)
-
 func Calc1(inputFilepath string) int {
 	file, err := os.Open(inputFilepath)
 	defer file.Close()
